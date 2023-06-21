@@ -1,0 +1,9 @@
+<h2>Choose Template</h2>
+<div class="template-grid">
+  {% for template in templates %}
+    <div class="template-item">
+      <img src="{{ template.image }}" alt="{{ template.name }}">
+      <a href="{% url 'resume_app:create_resume' template.id %}">Select Template</a>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,11 @@
+<h2>Add Qualifications</h2>
+<form method="POST" action="{% url 'resume_app:add_qualifications' resume.id %}">
+  {% csrf_token %}
+  <input type="text" name="degree" placeholder="Degree">
+  <input type="text" name="college" placeholder="College">
+  <input type="text" name="year" placeholder="Year">
+  <input type="text" name="course" placeholder="Course">
+  <input type="text" name="institute" placeholder="Institute">
+  <textarea name="description" placeholder="Description"></textarea>
+  <button type="submit">Add Qualification</button>
+</form>

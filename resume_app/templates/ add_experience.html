@@ -1,0 +1,13 @@
+<h2>Add Experience</h2>
+<form method="POST" action="{% url 'resume_app:add_experience' resume.id %}">
+  {% csrf_token %}
+  <input type="text" name="companyname" placeholder="Company Name">
+  <input type="text" name="position" placeholder="Position">
+  <input type="text" name="startdate" placeholder="Start Date">
+  <input type="text" name="enddate" placeholder="End Date">
+  <input type="text" name="projects" placeholder="Projects">
+  <textarea name="project_discription" placeholder="Project Description"></textarea>
+  <textarea name="responsibilities" placeholder="Responsibilities"></textarea>
+  <textarea name="jobdescription" placeholder="Job Description"></textarea>
+  <button type="submit">Add Experience</button>
+</form>
